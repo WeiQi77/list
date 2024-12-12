@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器的使用</title>
+</head>
+<body>
+<p>{{ greet|cut:',' }}</p>
+<p>生日：{{ birthday|date:'Y年n月j日' }}</p>
+<p>个人简介:{{ profile|default:"这个家伙很懒，什么都没有留下" }}</p>
+<p>个人简介:{{ profile1|default:"这个家伙很懒，什么都没有留下" }}</p>
+<div style="background-color: antiquewhite">{{ html|safe }}</div>
+</body>
+</html>

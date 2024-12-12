@@ -1,0 +1,17 @@
+{% extends 'xfz_base.html' %}
+
+{% block title %}
+首页
+{% endblock %}
+{% block head %}
+    <style>
+    body{
+        background-color: aliceblue;
+    }
+    </style>
+{% endblock %}
+{% block body %}
+    {{ block.super }}
+    {% include 'xfz_hotarticle.html' %}
+    <div> 一万年太久，只争朝夕！ </div>
+{% endblock %}

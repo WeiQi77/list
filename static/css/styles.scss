@@ -1,0 +1,35 @@
+$primary: #ff4081;
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  input {
+    display: none;
+
+    @for $i from 1 through 5 {
+      &#toggle-#{$i}:checked ~ .label-#{$i} {
+        width: 6rem;
+      }
+    }
+  }
+  label {
+    width: 4rem;
+    height: 3rem;
+    border-radius: 999px;
+    background: $primary;
+    cursor: pointer;
+    transition: 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+}
